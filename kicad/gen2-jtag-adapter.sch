@@ -1,0 +1,380 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr USLetter 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "Particle Gen2 JTAG/SWD Adapter for Gen3 Debugger"
+Date "2020-08-14"
+Rev "1.0"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L photon:PHOTON U1
+U 1 1 5F36D15C
+P 5150 3700
+F 0 "U1" H 5150 3700 50  0001 L BNN
+F 1 "PHOTON" H 5150 3700 50  0001 L BNN
+F 2 "gen2-jtag:PHOTON" H 5150 3700 50  0001 C CNN
+F 3 "" H 5150 3700 50  0001 C CNN
+	1    5150 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x05_Odd_Even J1
+U 1 1 5F36F6BE
+P 7250 2800
+F 0 "J1" H 7250 3200 50  0000 C CNN
+F 1 "FTSH-105-01-F-DV-K" H 7650 3100 50  0000 C CNN
+F 2 "gen2-jtag:CONN5X2_1.27" H 7250 2800 50  0001 C CNN
+F 3 "~" H 7250 2800 50  0001 C CNN
+	1    7250 2800
+	1    0    0    -1  
+$EndComp
+Text GLabel 7550 2600 2    50   Input ~ 0
+SWDIO
+Text GLabel 7550 2700 2    50   Input ~ 0
+SWCLK
+Text GLabel 5850 3600 2    50   Input ~ 0
+SWCLK
+Text GLabel 5850 3400 2    50   Input ~ 0
+SWDIO
+Text GLabel 7550 3000 2    50   Input ~ 0
+N_RST
+Text GLabel 5850 2800 2    50   Input ~ 0
+N_RST
+$Comp
+L Jumper:SolderJumper_2_Open JP1
+U 1 1 5F373E48
+P 6500 2600
+F 0 "JP1" H 6500 2805 50  0000 C CNN
+F 1 "+3.3V Jumper" H 6500 2714 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 6500 2600 50  0001 C CNN
+F 3 "~" H 6500 2600 50  0001 C CNN
+	1    6500 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 2600 5900 2600
+Wire Wire Line
+	6650 2600 7050 2600
+Text GLabel 7050 3000 0    50   Input ~ 0
+GND
+Text GLabel 5850 3200 2    50   Input ~ 0
+GND
+Text GLabel 4450 2800 0    50   Input ~ 0
+GND
+Text GLabel 7550 2800 2    50   Input ~ 0
+SWO
+Text GLabel 5850 4000 2    50   Input ~ 0
+SWO
+$Comp
+L Device:R R1
+U 1 1 5F377AB9
+P 6600 4000
+F 0 "R1" H 6670 4046 50  0000 L CNN
+F 1 "10k" H 6670 3955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6530 4000 50  0001 C CNN
+F 3 "~" H 6600 4000 50  0001 C CNN
+	1    6600 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5F3782B2
+P 6600 4400
+F 0 "R2" H 6670 4446 50  0000 L CNN
+F 1 "10k" H 6670 4355 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6530 4400 50  0001 C CNN
+F 3 "~" H 6600 4400 50  0001 C CNN
+	1    6600 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 4150 6600 4200
+$Comp
+L power:GND #PWR0101
+U 1 1 5F379DC5
+P 6600 4550
+F 0 "#PWR0101" H 6600 4300 50  0001 C CNN
+F 1 "GND" H 6605 4377 50  0000 C CNN
+F 2 "" H 6600 4550 50  0001 C CNN
+F 3 "" H 6600 4550 50  0001 C CNN
+	1    6600 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0102
+U 1 1 5F37AD79
+P 6600 3850
+F 0 "#PWR0102" H 6600 3700 50  0001 C CNN
+F 1 "+3.3V" H 6615 4023 50  0000 C CNN
+F 2 "" H 6600 3850 50  0001 C CNN
+F 3 "" H 6600 3850 50  0001 C CNN
+	1    6600 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 2600 5900 2450
+Connection ~ 5900 2600
+Wire Wire Line
+	5900 2600 5850 2600
+$Comp
+L power:+3.3V #PWR0103
+U 1 1 5F37D592
+P 5900 2450
+F 0 "#PWR0103" H 5900 2300 50  0001 C CNN
+F 1 "+3.3V" H 5915 2623 50  0000 C CNN
+F 2 "" H 5900 2450 50  0001 C CNN
+F 3 "" H 5900 2450 50  0001 C CNN
+	1    5900 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5F382EB3
+P 7000 4000
+F 0 "R3" H 7070 4046 50  0000 L CNN
+F 1 "10k" H 7070 3955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6930 4000 50  0001 C CNN
+F 3 "~" H 7000 4000 50  0001 C CNN
+	1    7000 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5F382EB9
+P 7000 4400
+F 0 "R4" H 7070 4446 50  0000 L CNN
+F 1 "10k" H 7070 4355 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6930 4400 50  0001 C CNN
+F 3 "~" H 7000 4400 50  0001 C CNN
+	1    7000 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7000 4150 7000 4200
+$Comp
+L power:GND #PWR0104
+U 1 1 5F382EC0
+P 7000 4550
+F 0 "#PWR0104" H 7000 4300 50  0001 C CNN
+F 1 "GND" H 7005 4377 50  0000 C CNN
+F 2 "" H 7000 4550 50  0001 C CNN
+F 3 "" H 7000 4550 50  0001 C CNN
+	1    7000 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0105
+U 1 1 5F382EC6
+P 7000 3850
+F 0 "#PWR0105" H 7000 3700 50  0001 C CNN
+F 1 "+3.3V" H 7015 4023 50  0000 C CNN
+F 2 "" H 7000 3850 50  0001 C CNN
+F 3 "" H 7000 3850 50  0001 C CNN
+	1    7000 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5F38445B
+P 7400 4000
+F 0 "R5" H 7470 4046 50  0000 L CNN
+F 1 "10k" H 7470 3955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7330 4000 50  0001 C CNN
+F 3 "~" H 7400 4000 50  0001 C CNN
+	1    7400 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5F384461
+P 7400 4400
+F 0 "R6" H 7470 4446 50  0000 L CNN
+F 1 "10k" H 7470 4355 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7330 4400 50  0001 C CNN
+F 3 "~" H 7400 4400 50  0001 C CNN
+	1    7400 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7400 4150 7400 4200
+$Comp
+L power:GND #PWR0106
+U 1 1 5F384468
+P 7400 4550
+F 0 "#PWR0106" H 7400 4300 50  0001 C CNN
+F 1 "GND" H 7405 4377 50  0000 C CNN
+F 2 "" H 7400 4550 50  0001 C CNN
+F 3 "" H 7400 4550 50  0001 C CNN
+	1    7400 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0107
+U 1 1 5F38446E
+P 7400 3850
+F 0 "#PWR0107" H 7400 3700 50  0001 C CNN
+F 1 "+3.3V" H 7415 4023 50  0000 C CNN
+F 2 "" H 7400 3850 50  0001 C CNN
+F 3 "" H 7400 3850 50  0001 C CNN
+	1    7400 3850
+	1    0    0    -1  
+$EndComp
+Text GLabel 6550 4200 0    50   Input ~ 0
+SWDIO
+Wire Wire Line
+	6550 4200 6600 4200
+Connection ~ 6600 4200
+Wire Wire Line
+	6600 4200 6600 4250
+Text GLabel 6950 4200 0    50   Input ~ 0
+SWCLK
+Wire Wire Line
+	6950 4200 7000 4200
+Connection ~ 7000 4200
+Wire Wire Line
+	7000 4200 7000 4250
+Text GLabel 7350 4200 0    50   Input ~ 0
+SWO
+Wire Wire Line
+	7350 4200 7400 4200
+Connection ~ 7400 4200
+Wire Wire Line
+	7400 4200 7400 4250
+$Comp
+L Device:R R7
+U 1 1 5F38D264
+P 7800 4000
+F 0 "R7" H 7870 4046 50  0000 L CNN
+F 1 "10k" H 7870 3955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7730 4000 50  0001 C CNN
+F 3 "~" H 7800 4000 50  0001 C CNN
+	1    7800 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 5F38D26A
+P 7800 4400
+F 0 "R8" H 7870 4446 50  0000 L CNN
+F 1 "10k" H 7870 4355 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7730 4400 50  0001 C CNN
+F 3 "~" H 7800 4400 50  0001 C CNN
+	1    7800 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7800 4150 7800 4200
+$Comp
+L power:GND #PWR0108
+U 1 1 5F38D271
+P 7800 4550
+F 0 "#PWR0108" H 7800 4300 50  0001 C CNN
+F 1 "GND" H 7805 4377 50  0000 C CNN
+F 2 "" H 7800 4550 50  0001 C CNN
+F 3 "" H 7800 4550 50  0001 C CNN
+	1    7800 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0109
+U 1 1 5F38D277
+P 7800 3850
+F 0 "#PWR0109" H 7800 3700 50  0001 C CNN
+F 1 "+3.3V" H 7815 4023 50  0000 C CNN
+F 2 "" H 7800 3850 50  0001 C CNN
+F 3 "" H 7800 3850 50  0001 C CNN
+	1    7800 3850
+	1    0    0    -1  
+$EndComp
+Text GLabel 7750 4200 0    50   Input ~ 0
+N_RST
+Wire Wire Line
+	7750 4200 7800 4200
+Connection ~ 7800 4200
+Wire Wire Line
+	7800 4200 7800 4250
+Text GLabel 7050 2700 0    50   Input ~ 0
+GND
+Text GLabel 7050 2800 0    50   Input ~ 0
+GND
+$Comp
+L Jumper:SolderJumper_2_Open JP2
+U 1 1 5F38D615
+P 3950 3000
+F 0 "JP2" H 3950 3205 50  0000 C CNN
+F 1 "RX Jumper" H 3950 3114 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 3950 3000 50  0001 C CNN
+F 3 "~" H 3950 3000 50  0001 C CNN
+	1    3950 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Open JP3
+U 1 1 5F3908F7
+P 3950 3200
+F 0 "JP3" H 3950 3100 50  0000 C CNN
+F 1 "TX Jumper" H 3950 3000 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 3950 3200 50  0001 C CNN
+F 3 "~" H 3950 3200 50  0001 C CNN
+	1    3950 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 3200 4450 3200
+Wire Wire Line
+	4100 3000 4450 3000
+Text GLabel 7050 2900 0    50   Input ~ 0
+RX
+Text GLabel 3800 3000 0    50   Input ~ 0
+RX
+Text GLabel 7550 2900 2    50   Input ~ 0
+TX
+Text GLabel 3800 3200 0    50   Input ~ 0
+TX
+Wire Notes Line
+	3550 2700 4200 2700
+Wire Notes Line
+	4200 2700 4200 3500
+Wire Notes Line
+	4200 3500 3550 3500
+Wire Notes Line
+	3550 3500 3550 2700
+Text Notes 3300 2650 0    50   ~ 0
+Solder to use Debugger\nas Serial USB interface.
+Wire Notes Line
+	6200 3600 8050 3600
+Wire Notes Line
+	8050 3600 8050 4800
+Wire Notes Line
+	8050 4800 6200 4800
+Wire Notes Line
+	6200 4800 6200 3600
+Text Notes 6200 3550 0    50   ~ 0
+Optional pull up / pull down resistors
+Text Notes 4700 5750 0    50   ~ 0
+Supports Electron which\nwill simply pass through\nthis area with stackable\nheaders
+Wire Notes Line
+	4650 6100 5650 6100
+Wire Notes Line
+	5650 6100 5650 5000
+Wire Notes Line
+	4650 5000 4650 6100
+$Comp
+L logo:PARTICLE_LOGO_9MM U2
+U 1 1 5F370A2F
+P 6300 6650
+F 0 "U2" H 6300 6650 50  0001 L BNN
+F 1 "PARTICLE_LOGO_9MM" H 6350 6700 50  0001 L BNN
+F 2 "gen2-jtag:particle-logo-9mm" H 6350 6700 50  0001 L BNN
+F 3 "" H 6300 6650 50  0001 C CNN
+	1    6300 6650
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

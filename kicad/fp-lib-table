@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name gen2-jtag)(type KiCad)(uri /Users/brett/Documents/gen2-jtag-adapter/kicad/libs/gen2-jtag-adapter.pretty)(options "")(descr ""))
+)

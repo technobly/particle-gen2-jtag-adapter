@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name logo)(type Legacy)(uri /Users/brett/Documents/gen2-jtag-adapter/kicad/libs/PARTICLE_LOGO.lib)(options "")(descr ""))
+  (lib (name photon)(type Legacy)(uri /Users/brett/Documents/gen2-jtag-adapter/kicad/libs/PHOTON.lib)(options "")(descr ""))
+)

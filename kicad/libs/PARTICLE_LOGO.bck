@@ -1,0 +1,17 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#(c) SnapEDA 2016 (snapeda.com)
+#This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA) with Design Exception 1.0
+#
+# PARTICLE_LOGO
+#
+DEF PARTICLE_LOGO U 0 40 N N 1 L N
+F0 "U" 0 0 50 H I L BNN
+F1 "PARTICLE_LOGO" 0 0 50 H I L BNN
+F2 "PARTICLE_LOGO_15MM" 0 0 50 H I L BNN
+DRAW
+T 0 0 0 50 0 0 0 Particle~Logo~15mm Normal 0 L B
+ENDDRAW
+ENDDEF
+#
+# End Library
