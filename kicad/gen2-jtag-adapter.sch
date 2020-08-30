@@ -5,8 +5,8 @@ $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "Particle Gen2 JTAG/SWD Adapter for Gen3 Debugger"
-Date "2020-08-14"
-Rev "1.0"
+Date "2020-08-29"
+Rev "1.1"
 Comp ""
 Comment1 ""
 Comment2 ""
