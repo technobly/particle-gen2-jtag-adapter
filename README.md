@@ -3,7 +3,7 @@ Particle Gen2 JTAG/SWD adapter for Gen3 Debugger
 
 Allows you to easily connect a Gen3 Particle Debugger to a Gen2 Photon/Electron in circuit using pass-through headers.
 
-![render](render.gif)
+![render](render_v11.gif)
 
 
 BOM
